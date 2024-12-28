@@ -11,6 +11,7 @@ export default class ShopItemClass extends React.Component {
     this.price = item.price;
     this.currency = item.currency;
   }
+
   render() {
     return (
       <div className="main-content">
