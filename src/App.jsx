@@ -17,17 +17,19 @@ export default class App extends React.Component {
   }
 
   render() {
-    return (
-      <div className="container">
-        <div className="background-element">
+    if (this.item instanceof Item) {
+      return (
+        <div className="container">
+          <div className="background-element">
+          </div>
+          <div className="highlight-window">
+            <div className='highlight-overlay'></div>
+          </div>
+          <div className="window">
+            <ShopItemClass {...this.item} />
+          </div>
         </div>
-        <div className="highlight-window">
-          <div className='highlight-overlay'></div>
-        </div>
-        <div className="window">
-          <ShopItemClass {...this.item} />
-        </div>
-      </div>
-    );
+      );
+    }
   }
 }
